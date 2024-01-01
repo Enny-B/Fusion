@@ -1,0 +1,471 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap');
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css");
+
+*{
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    border: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    outline: none;
+}
+
+:root{
+    --color-default: #0a0d13;
+    --color-primary: rgb(246, 116, 68);
+    --color-secondary: rgb(37, 37, 154);
+    --color-icon: rgb(22, 22, 92);
+    --color-text-hover: rgb(246, 116, 68);
+    --color-hover: #d2bdbd;
+    --font-bold-color: #0d1e3f;
+    --text-color: #ffffff;
+    --box-xcolor: #d7d7d7;
+    --font-primary: "Lato", sans-serif;
+    --font-secondary: 'Mylius', sans-serif;
+    --font-default: "Open Sans", "Segoe UI", "Helvetica Neue", "Liberation Sans", Roboto, Arial, sans-serif;
+    --fa-style-family-classic: "Font Awesome 6 Free"
+    --fa-font-solid: normal 900 1em/1 "Font Awesome 6 Free";
+    --fa-font-regular: normal 400 1em/1 "Font Awesome 6 Free";
+    --fa-font-low-regular: 300;
+    --fa-font-weight-regular: 400;
+    --fa-font-weight-solid: 700;
+    --fa-font-weight-bold: 900;
+    --bg-font: 2.7rem;
+    --small-font: 1.5rem;
+}
+
+@font-face{
+    font-family: 'Mylius';
+    src: url('fonts/Mylius-Bold.eot') format('eot'),
+    url('fonts/Mylius-Bold.ttf') format('ttf'),
+    url('fonts/Mylius-Bold.woff') format('woff'),
+    url('fonts/Mylius-Bold.woff2') format('woff2'),
+    url('fonts/Mylius-Italic.eot') format('eot'),
+    url('fonts/Mylius-Italic.ttf') format('ttf');
+}
+
+html{
+    overflow-x: hidden;
+}
+
+body{
+    font-family: var(--font-default);
+    color: var(--color-default);
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+section{
+    width: 100%;
+    margin: 0 auto;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+
+.header {
+    position: fixed;
+    display: flex;
+    gap: 20rem;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    background: transparent;
+    transition: .3s;
+    padding: .1rem 3%; /* Adjust padding as needed for spacing */
+    background-color: #ffffff;
+    width: 100%;
+}
+
+.logo-animate {
+    margin-right: auto; /* Push the logo to the far left */
+}
+
+.logo-white {
+    height: 5.5rem;
+}
+
+.navbar {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-grow: 1; /* Allow the navbar to grow and push the links to the far right */
+}
+
+.navbar a {
+    font-size: .7rem;
+    color: #0a0d13;
+    font-weight: var(--fa-font-weight-solid);
+    margin-left: 30px; /* Increase left margin for more spacing */
+    transition: .4s;
+    font-family: 'Mylius-Bold', sans-serif;
+}
+
+
+.navbar a:hover,
+.navbar a.active{
+    color: var(--color-text-hover);
+    /* font-weight: var(--fa-font-weight-bold); */
+    transition: 0.5s ease-out;
+}
+
+.navbar a:nth-child(4){
+    color: var(--color-text-hover);
+}
+
+.navbar a:nth-child(4):hover{
+    background-color: var(--color-text-hover);
+    color: var(--text-color);
+    transition: 0.5s ease-in;
+    padding: 5px;
+    border-radius: .2rem;
+}
+
+/* 1STSECTION */
+
+.section-animate{
+    background-image: url(/desktop-img.jpg);
+    background-size: cover;
+    position: relative;
+}
+
+
+.container-div{
+    padding: 12rem 10%;
+    max-width: 50rem;
+}
+
+.container-div h2{
+    font-size: var(--bg-font);
+    font-family: 'Mylius-Bold', sans-serif;
+    color: var(--font-bold-color);
+    font-weight: var(--fa-font-weight-solid);
+}
+
+.container-div .text-animate{
+    position: relative;
+    overflow: hidden;
+}
+
+.container-div .text-animate h2{
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(1em);
+    animation: fadeInUp 0.5s ease-out forwards;
+}
+
+.feature-proj{
+    background-color: #1855ce;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: .1rem;
+}
+.text-inside{
+    color: var(--text-color);
+    font-size: .5rem;
+    font-weight: 200;
+    font-family: 'Mylius', sans-serif;
+    align-items: center;
+    text-align: center;
+}
+
+.text-inside h4{
+    font-size: .3rem;
+}
+
+.div-navs{
+    display: flex;
+    gap: .8rem;
+    background-color: #0d1e3f;
+    /* padding-bottom: rem; */
+}
+
+.text-inside h4{
+    width: 5rem;
+}
+
+.div-navs span{
+    padding: .2rem;
+}
+
+.about{
+    background-color: var(--text-color);
+    width: 100%;
+    max-width: 50rem;
+    padding: 2rem 5%;
+    margin: 0 auto;
+    position: relative;
+}
+
+.between-divs img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transform: translateX(-10%);
+}
+
+.about-template{
+    background-color: var(--color-secondary);
+    height: 0 auto;
+    padding: 2rem 3%;
+    position: absolute;
+    top: 15%;
+    left: 35%;
+    transform: translate(40%);
+    border-radius: .1rem;
+    box-sizing: border-box;
+    width: 70%;
+}
+
+#aboutus h3{
+    color: #ffffff;
+    font-family: 'Mylius-Bold', sans-serif;
+    font-weight: var(--fa-font-weight-solid);
+}
+
+#aboutus h4{
+    color: var(--text-color);
+    font-size: .8rem;
+    font-family: 'Lato', sans-serif;
+    font-weight: var(--fa-font-low-regular);
+}
+
+#aboutus a{
+    background-color: var(--text-color);
+    padding: .4rem;
+    font-weight: 700;
+    /* font-weight: var(--fa-font-weight-); */
+    color: var(--color-secondary);
+    border-radius: .3rem;
+    font-size: .75rem;
+    transition: 0.5s ease-in;
+}
+
+#aboutus a:hover,
+#aboutus a.active{
+    font-weight: 900;
+    /* transition: .3s ease-out; */
+}
+
+/* LINKS */
+
+.links-subs{
+    width: 100%;
+    height: 90vh;
+    padding: 5rem 5%;
+  }
+
+  .links-subs{
+    background-image: url(/Frame.png);
+    background-size: cover;
+}
+
+.rectangle-boxes{
+    display: flex;
+    gap: 2rem;
+    text-align: center;
+    justify-content: center;
+    position: relative;
+    top: 5rem;
+}
+
+.rectangle-boxes .box-one{
+    background-color: var(--box-xcolor);
+    padding: 5rem 10%;
+    border-radius: 2rem;
+}
+
+
+
+/* SECTIONTWODESIGN */
+.section-div{
+    background-color: var(--box-xcolor);
+    padding: 5rem  10%;
+    margin: 0 auto;
+}
+
+
+.space-between-block{
+    display: flex;
+    gap: 1rem;
+    position: relative;
+    top: 0;
+    width: 50rem;
+    margin: 0 auto;
+}
+
+.column-space{
+    display: flex;
+    flex-direction: column;
+    font-family: 'Lato', sans-serif;
+    /* gap: 2rem; */
+}
+
+.column-space span{
+    color: var(--color-secondary);
+    font-weight: var(--fa-font-weight-bold);
+}
+
+.logo-footer{
+    position: relative;
+    margin-left: -.5rem;
+}
+
+.logo-footer img{
+    height: 4rem;
+}
+
+section .news-row-axet{
+    display: flex;
+    flex-direction: column;
+    gap: .9rem;
+    /* width: 50rem; */
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.news-row-axet h3{
+    font-size: .8rem;
+    line-height: 6px;
+    color: var(--color-secondary);
+    font-family: 'Mylius-Bold', sans-serif;
+    font-weight: var(--fa-font-weight-bold);
+}
+
+
+input[type="email"]{
+    padding: .4rem;
+    width: 180px;
+    /* border: 1px solid #ffffff; */
+    border-radius: .1rem;
+    font-size: .5rem;
+    /* customize the place holder color */
+}
+
+
+
+/* the subscribe button */
+input[type="submit"]{
+    padding: .4rem;
+    width: 80px;
+    background-color: var(--color-primary);
+    color: var(--text-color);
+    border-radius: .1rem;
+    cursor: pointer;
+    font-family: 'Lato', sans-serif;
+    font-weight: var(--fa-font-weight-regular);
+    font-size: .5rem;
+}
+
+input[type="submit"]:hover{
+    background-color: var(--text-color);
+    color: var(--color-primary);
+    box-shadow: 2px 2px var(--color-primary);
+    transition: 0.5s ease-out;
+    font-weight: 600;
+}
+
+.social-icons{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    position: relative;
+    top: .5rem;
+}
+
+.social-icons h4{
+    font-size: .7rem;
+    font-weight: var(--fa-font-regular);
+    color: #204389;
+    font-family: var(--fa-font-weight-regular);
+}
+
+.social-icons .input-icons .icons-social{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    height: 1.7rem;
+    /* background-color: #204389; */
+}
+
+.icons-social i{
+    color: var(--color-icon);
+    font-size: 1.6rem;
+}
+
+.icons-social i:hover{
+    cursor: pointer;
+    color: var(--color-secondary);
+    transition: .5s ease-in-out;
+    font-size: 2rem;
+}
+
+.image-container{
+    background-size: cover;
+    background-image: url(/brand.jpg);
+    position: relative;
+    padding: .4rem 5%;
+    width: 80rem;
+}
+
+.brand-identity {
+    background-color: #204389;
+    padding: .5rem 5%;
+    width: 25rem;
+}
+
+
+.image-container .brand-identity h5 {
+    font-size: .6rem;
+    font-weight: lighter;
+    color: #ffffff;
+    margin: 0; /* Adjust the margin as needed */
+    font-family: 'Lato', sans-serif;
+}
+
+
+@media (max-width: 767px) {
+    .header {
+        padding: 1rem 10%;
+        position: fixed;
+        display: flex;
+        gap: 2rem; /* Adjust padding for smaller screens */
+    }
+
+    .navbar a {
+        margin-left: 10px; /* Adjust left margin for smaller screens */
+    }
+
+    .navbar i {
+        margin-right: 15px; /* Adjust right margin for smaller screens */
+    }
+}
+
+
+/* KEYFRAMES */
+@keyframes fadeInUp {
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* ANIMATIONS */
+.animate{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--text-color);
+    z-index: 98;
+}
