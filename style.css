@@ -259,30 +259,73 @@ img{
 
 .links-subs{
     width: 100%;
-    height: 90vh;
-    padding: 5rem 5%;
-  }
+    /* height: 100vh; */
+    min-height: 80vh;
+    padding: 4rem 5%;
+}
 
-  .links-subs{
+.links-subs{
     background-image: url(/Frame.png);
     background-size: cover;
 }
 
 .rectangle-boxes{
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
     display: flex;
-    gap: 2rem;
-    text-align: center;
-    justify-content: center;
-    position: relative;
-    top: 5rem;
+    gap: 20px;
 }
 
 .rectangle-boxes .box-one{
-    background-color: var(--box-xcolor);
-    padding: 5rem 10%;
+    flex: 1;
+    flex-basis: calc(25%-20px);
+    box-sizing: border-box;
+    background-color: var(--font-bold-color);
+    padding: 2rem;
     border-radius: 2rem;
+    color: var(--text-color);
+    text-align: center;
+    align-items: center;
 }
 
+.box-one .text{
+    margin-right: 20px;
+    font-size: .5rem;
+    line-height: 1.2;
+}
+
+.box-one img{
+    height: 5rem;
+    text-align: center;
+    align-items: center;
+}
+
+.box-one h3{
+    font-size: .8rem;
+    color: var(--box-xcolor);
+    text-align: center;
+}
+
+.box-one .text p{
+    font-size: .5rem;
+}
+
+.box-one a{
+    background-color: var(--text-color);
+    padding: .2rem;
+    font-weight: 700;
+    color: var(--color-secondary);
+    border-radius: .3rem;
+    font-size: .5rem;
+    transition: 0.5s ease-out;
+}
+
+#subsidiaries a:hover,
+#subsidiaries a.active{
+    font-weight: 900;
+    /* transition: .3s ease-out; */
+}
 
 
 /* SECTIONTWODESIGN */
@@ -437,18 +480,31 @@ input[type="submit"]:hover{
         padding: 1rem 10%;
         position: fixed;
         display: flex;
-        gap: 2rem; /* Adjust padding for smaller screens */
+        gap: 4rem; /* Adjust padding for smaller screens */
     }
 
     .navbar a {
         margin-left: 10px; /* Adjust left margin for smaller screens */
+        font-size: .4rem;
     }
 
     .navbar i {
-        margin-right: 15px; /* Adjust right margin for smaller screens */
+        margin-right: 10px; /* Adjust right margin for smaller screens */
+    }
+    .text{
+        margin-right: 10px;
+    }
+    .box-one{
+        flex-basis: calc(50%-20px);
     }
 }
 
+@media (max-width: 520px){
+    .navbar a{
+        font-size: .4rem;
+        margin-right: 1rem;
+    }
+}
 
 /* KEYFRAMES */
 @keyframes fadeInUp {
