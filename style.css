@@ -260,72 +260,108 @@ img{
 .links-subs{
     width: 100%;
     /* height: 100vh; */
-    min-height: 80vh;
-    padding: 4rem 5%;
+    background-color: var(--color-secondary);
+    min-height: 100vh;
+    padding: 5rem 5%;
+    justify-content: center;
+    align-items: center;
 }
 
-.links-subs{
-    background-image: url(/Frame.png);
-    background-size: cover;
+.links-section{
+    text-align: left;
+    /* padding-top: 1rem; */
 }
 
-.rectangle-boxes{
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 20px;
-    display: flex;
-    gap: 20px;
-}
-
-.rectangle-boxes .box-one{
-    flex: 1;
-    flex-basis: calc(25%-20px);
-    box-sizing: border-box;
-    background-color: var(--font-bold-color);
-    padding: 2rem;
-    border-radius: 2rem;
+.links-section h1{
     color: var(--text-color);
-    text-align: center;
+    /* text-decoration: underline; */
+    font-size: 2rem;
+}
+
+.circles{
+    display: flex;
+    width: 100%;
     align-items: center;
+    justify-content: flex-start;
+    gap: 5rem;
+    min-height: 11vh;
 }
 
-.box-one .text{
-    margin-right: 20px;
-    font-size: .5rem;
-    line-height: 1.2;
-}
-
-.box-one img{
-    height: 5rem;
-    text-align: center;
+.circle{
+    min-width: 7rem;
+    width: 9rem;
+    /* height: 30vh; */
+    aspect-ratio: 1/1;
+    border-radius: 55%;
+    background-color: white;
+    cursor: pointer;
+    opacity: 0.5;
+    transition: 0.3s ease-out;
+    justify-content: center;
     align-items: center;
+    text-align: center;
+    padding: 1.2rem;
 }
 
-.box-one h3{
+.circle img{
+    width: 100%;
+    /* height: 0%; */
+}
+
+.circle:hover{
+    opacity: 0.75;
+}
+
+.active{
+    min-width: 10rem;
+    width: 10rem;
+    opacity: 1;
+    position: relative;
+    left: 0;
+}
+
+.other{
+    text-decoration: none;
+    color: white;
+    max-width: 75%;
+    min-height: 20rem;
+}
+
+.button{
+    background-color: #ffffff;
+    color: blue;
+    padding: 0.5rem 1rem;
+    font-weight: var(--fa-font-weight-solid);
+    width: fit-content;
+}
+
+.title{
+    transition: 0.3s ease-out;
+    position: relative;
+    top: -2rem;
+}
+
+.title:hover{
+    color: salmon;
+    cursor: pointer;
+}
+
+.underline{
+    position: absolute;
+    width: 15%;
+    height: .4rem;
+    border-radius: 1rem;
+    background-color: var(--color-primary);
+    bottom: -.5rem;
+    left: 0;
+    transition: 0.3s ease-out;
+}
+
+.message p{
     font-size: .8rem;
-    color: var(--box-xcolor);
-    text-align: center;
 }
 
-.box-one .text p{
-    font-size: .5rem;
-}
 
-.box-one a{
-    background-color: var(--text-color);
-    padding: .2rem;
-    font-weight: 700;
-    color: var(--color-secondary);
-    border-radius: .3rem;
-    font-size: .5rem;
-    transition: 0.5s ease-out;
-}
-
-#subsidiaries a:hover,
-#subsidiaries a.active{
-    font-weight: 900;
-    /* transition: .3s ease-out; */
-}
 
 
 /* SECTIONTWODESIGN */
